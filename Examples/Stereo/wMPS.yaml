@@ -1,0 +1,122 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# System config
+#--------------------------------------------------------------------------------------------
+
+# When the variables are commented, the system doesn't load a previous session or not store the current one
+
+# If the LoadFile doesn't exist, the system give a message and create a new Atlas from scratch
+#System.LoadAtlasFromFile: "Session_MH01_MH02_MH03_Stereo60_Pseudo"
+
+# The store file is created from the current session, if a file with the same name exists it is deleted
+#System.SaveAtlasToFile: "Session_MH01_MH02_MH03_Stereo60_Pseudo"
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+File.version: "1.0"
+
+Camera.type: "PinHole"
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera1.fx: 1203.913043478
+Camera1.fy: 1203.913043478
+Camera1.cx: 613.565217391
+Camera1.cy: 527.217391304
+
+Camera1.k1: -0.176293715
+Camera1.k2: 0.140290419
+Camera1.p1: 0.000608532
+Camera1.p2: 0.001731367
+
+Camera2.fx: 1200.289855072
+Camera2.fy: 1200.289855072
+Camera2.cx: 607.47826087
+Camera2.cy: 549.739130435
+
+Camera2.k1: -0.17576578
+Camera2.k2: 0.142572997
+Camera2.p1: 0.000415476
+Camera2.p2: 0.001610203
+
+Camera.width: 1216
+Camera.height: 1024
+
+# Camera frames per second 
+Camera.fps: 15
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+Stereo.ThDepth: 60.0
+Stereo.T_c1_c2: !!opencv-matrix
+  rows: 4
+  cols: 4
+  dt: f
+  data: [0.997827134766485, -0.00357559935423607, -0.0657892408602327, 0.196296521,
+         0.000626512178829447, 0.998996119599406, -0.0447924157399355, 0.000756008954580125,
+         0.0658833560635576, 0.0446538700964142, 0.996827675819254, 0.00565462970844283,
+         0, 0, 0, 1]
+
+wMPS.ReceiverPath: "./Examples/Stereo/wMPSTags.txt"
+Tpa: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [-0.941737204816359,0.336286628656650,-0.00650695408122957,  4.21815771664712,
+          -0.336318001960369,-0.941737644058330,0.00451788898176891,  1.47905022104880,
+          -0.00460853795212878,0.00644306993680868,0.999968623621628, 0.104859786992800,
+          0,0,0,1]
+Tpa2: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [0.640480311928959,0.767912455756636,0.00976884461932416,    0.274387222168999,
+          -0.767808681745050,0.640554531375332,-0.0126380604310034,   -0.525507976607640,
+          -0.0159624017087822,0.000593825177690575,0.999872416412887, 0.138348943350227,
+          0,0,0,1]
+Tpa3: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [-0.997205391209785,0.0736601326125314,-0.0124736765087114,  2.54710740016875,
+          -0.0734556903662487,-0.997168128590003,-0.0161240465494720, 0.753088107376898,
+          -0.0136260520679135,-0.0151627236278983,0.999792189666046,  0.151737988163843,
+          0,0,0,1]
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1500
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500.0
+Viewer.imageViewScale: 1.0
+
