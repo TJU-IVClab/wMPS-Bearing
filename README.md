@@ -68,10 +68,9 @@ chmod +x build.sh
 ./build.sh
 ```
 
-# 5. EuRoC Examples
-[EuRoC dataset](http://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets) was recorded with two pinhole cameras and an inertial sensor. We provide an example script to launch EuRoC sequences in all the sensor configurations.
-
-1. Download a sequence (ASL format) from http://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets
+# 4. Examples
+1. Download a sequence from https://pan.baidu.com/s/1BHCsJeX9bO_MDczM-tWPjw?pwd=72kk (Baidu Netdisk)
+Or from https://drive.google.com/file/d/1UjvJaJpDwB95ZEsRQqtdCw6hetwTYd_W/view?usp=drive_link (Google Drive)
 
 2. Run the system
 ./Examples/Stereo/stereo_euroc ./Vocabulary/ORBvoc.txt ./Examples/Stereo/wMPS.yaml ./Hand_Small_01 ./Examples/Stereo/wMPS_TimeStamps/Hand_Small_01.txt ./Examples/dataset-Hand_Small_01_Stereo ./Hand_Small_01/Bearing.txt
