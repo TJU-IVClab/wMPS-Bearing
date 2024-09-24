@@ -9,7 +9,7 @@ We provide examples to run wMPS-Bearing in the self-collected dataset using ster
 
 This software is based on [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) developed by Carlos Campos, Richard Elvira, Juan J. Gómez Rodríguez, [José M. M. Montiel](https://webdiis.unizar.es/~josemari/), and [Juan D. Tardos](https://webdiis.unizar.es/~jdtardos/).
 
-The hardware used in our experiments.![image](images/Real-Life Experiment.png)
+The hardware used in our experiments.![image](images/RealLife.png)
 
 The compared trajectories in real-life experiments.![image](images/Result1.png)
 
