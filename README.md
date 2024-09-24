@@ -3,17 +3,17 @@
 ### V1.0, September 1st, 2024
 Authors: Ze Yang, Yanyan Li, Hongzhi Du, Yanbiao Sun, and Jigui Zhu.
 
-wMPS-Bearing is the real-time SLAM library able to perform Visual SLAM with wMPS bearing measurements. wMPS-Bearing is as robust as the best systems available in the literature, and significantly more accurate. 
+wMPS-Bearing is the real-time SLAM library able to perform Visual SLAM with wMPS bearing measurements. It is as robust as the best systems available in the literature, and significantly more accurate. 
 
 We provide examples to run wMPS-Bearing in the self-collected dataset using stereo.
 
 This software is based on [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) developed by Carlos Campos, Richard Elvira, Juan J. Gómez Rodríguez, [José M. M. Montiel](https://webdiis.unizar.es/~josemari/), and [Juan D. Tardos](https://webdiis.unizar.es/~jdtardos/).
 
-The hardware used in our experiments.![image](images/RealLife.png)
+**The hardware used in our experiments.**![image](images/RealLife.png)
 
-The compared trajectories in real-life experiments.![image](images/Result1.png)
+**The compared trajectories in real-life experiments.**![image](images/Result1.png)
 
-0.5m x 0.5m fixed window display of local results in real-life experiments.![image](images/Result2.png)
+**0.5m x 0.5m fixed window display of local results in real-life experiments.**![image](images/Result2.png)
 
 ### Related Publications:
 
