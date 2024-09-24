@@ -9,6 +9,10 @@ We provide examples to run wMPS-Bearing in the self-collected dataset using ster
 
 This software is based on [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) developed by Carlos Campos, Richard Elvira, Juan J. Gómez Rodríguez, [José M. M. Montiel](https://webdiis.unizar.es/~josemari/), and [Juan D. Tardos](https://webdiis.unizar.es/~jdtardos/).
 
+(images/Real-Life Experiment.png)
+(images/Result1.png)
+(images/Result2.png)
+
 ### Related Publications:
 
 [wMPS-Point] Ze Yang, Yanyan Li, Jiarui Lin, Yanbiao Sun, and Jigui Zhu, **wMPS-SLAM: An Online and Accurate Monocular Visual-wMPS SLAM System**, *IEEE TIM 2023*. **[PDF](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10304161)**
@@ -69,15 +73,21 @@ chmod +x build.sh
 ```
 
 # 4. Examples
-1. Download a sequence from https://pan.baidu.com/s/1BHCsJeX9bO_MDczM-tWPjw?pwd=72kk (Baidu Netdisk)
-Or from https://drive.google.com/file/d/1UjvJaJpDwB95ZEsRQqtdCw6hetwTYd_W/view?usp=drive_link (Google Drive)
+### Download Example Sequence
+Download a sequence from [Baidu Netdisk](https://pan.baidu.com/s/1BHCsJeX9bO_MDczM-tWPjw?pwd=72kk) or from [Google Drive](https://drive.google.com/file/d/1UjvJaJpDwB95ZEsRQqtdCw6hetwTYd_W/view?usp=drive_link)
 
-2. Run the system
+### Run the system
+
+```
 ./Examples/Stereo/stereo_euroc ./Vocabulary/ORBvoc.txt ./Examples/Stereo/wMPS.yaml ./Hand_Small_01 ./Examples/Stereo/wMPS_TimeStamps/Hand_Small_01.txt ./Examples/dataset-Hand_Small_01_Stereo ./Hand_Small_01/Bearing.txt
+```
 
-3. Evaluation
+### Evaluation
 Execute the following script to process sequences and compute the RMS ATE:
-evo_ape tum Hand_Small_01_GT.txt dataset-Hand_Small_01_Stereo.txt -va
 
-## Acknowledgement
+```
+evo_ape tum Hand_Small_01_GT.txt dataset-Hand_Small_01_Stereo.txt -va
+```
+
+# 5. Acknowledgement
 ORB_SLAM3 and the corresponding community.
